@@ -14,6 +14,11 @@ using namespace std;
     Ler as 4 primeiras colunas
 */
 
+int notaFinal(int av1,int av2,int trab)
+{
+    return ((((av1 + av2) / 2) + trab) / 2);
+}
+
 int main()
 {
     int aluno[1][5];
@@ -29,6 +34,10 @@ int main()
     cout<<"AV1: "<<aluno[0][1]<<endl;
     cout<<"AV2: "<<aluno[0][2]<<endl;
     cout<<"Media do Trabalho: "<<aluno[0][3]<<endl;
+
+    aluno[0][4] = notaFinal(aluno[0][1], aluno[0][2], aluno[0][3]);
+
+    cout<<"Nota Final: "<<aluno[0][4];
     
     return 0;
 }
