@@ -7,7 +7,7 @@ using namespace std;
 /*  Questão 2 – a) Escreva um programa que leia 10 números inteiros e os armazene em um vetor. Imprima o vetor, o maior elemento (número e posição) e o menor elemento (número e posição)   */
 
 main(){
-    int vetor[10], maior=0, menor=1000000 /*gambiarra de lei :) #ExtremeGoHorse*/, i, ind_maior, ind_menor;
+    int vetor[10], maior=0, menor=1000000 /*#ExtremeGoHorse*/, i, ind_maior, ind_menor;
     
     cout<<" ----- LEITURA ----- "<<endl;
     cout<<endl;
