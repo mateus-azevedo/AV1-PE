@@ -1,6 +1,7 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
+#define TOTALUNO 2
 
 /*
     São 5 alunos, ou seja, 5 linhas no meu vetor
@@ -13,6 +14,11 @@ using namespace std;
 
     Ler as 4 primeiras colunas
 */
+
+struct aluno{
+    int matricula[TOTALUNO];
+    float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO];
+};
 
 int notaFinal(int av1,int av2,int trab)
 {
