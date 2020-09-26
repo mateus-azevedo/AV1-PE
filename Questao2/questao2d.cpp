@@ -17,7 +17,7 @@ using namespace std;
 
 struct dadosaluno{
     int matricula[TOTALUNO]={2015,2016,2017,2018,2019};
-    float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO] = {5,10,8,4,3};
+    float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO] = {5,10,8,4,5};
 };
 
 float notaFinal(float av1, float av2, float trab)
@@ -40,10 +40,12 @@ int main()
 
     system("cls");
 
-    int indice; float maior = -1;
+    int indice; float maior = -1, mediaNotasFinais = 0;
 
     for (int i = 0; i < TOTALUNO; i++)
     {
+        mediaNotasFinais = mediaNotasFinais + info.notaFinal[i];
+        
         if (info.notaFinal[TOTALUNO - i] > maior)
         {
             maior = info.notaFinal[TOTALUNO - i];
@@ -51,7 +53,10 @@ int main()
         }
     }
 
-    cout<<"MATRICULA: "<<info.matricula[indice]<<endl<<"NOTA FINAL: "<<info.notaFinal[indice];
+    mediaNotasFinais = (mediaNotasFinais / TOTALUNO);
+
+    cout<<"\t\tMELHOR ALUNO\n\tMATRICULA: "<<info.matricula[indice]<<"\n\tNOTA FINAL: "<<info.notaFinal[indice]<<endl<<endl;
+    cout<<"MEDIA ARITMETICA DAS NOTAS FINAIS DOS ALUNOS: "<<mediaNotasFinais;
 
     return 0;
 }
