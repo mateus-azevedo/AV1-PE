@@ -15,35 +15,41 @@ using namespace std;
     Ler as 4 primeiras colunas
 */
 
-struct aluno{
+struct dadosaluno{
     int matricula[TOTALUNO];
     float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO];
 };
 
-int notaFinal(int av1,int av2,int trab)
+int notaFinal(int av1, int av2, int trab)
 {
     return ((((av1 + av2) / 2) + trab) / 2);
 }
 
 int main()
 {
-    int aluno[1][5];
+    struct dadosaluno info;
     
-    cout<<"Matricula: "; cin>>aluno[0][0];
-    cout<<"AV1: "; cin>>aluno[0][1];
-    cout<<"AV2: "; cin>>aluno[0][2];
-    cout<<"Media do Trabalho: "; cin>>aluno[0][3];
+    for (int i = 0; i < TOTALUNO; i++)
+    {
+        cout<<"Matricula: "; cin>>info.matricula[i]; 
+        cout<<"AV1: "; scanf("%f", &info.av1[i]); //cin>>info.av1[i];
+        cout<<"AV2: "; scanf("%f", &info.av2[i]); //cin>>info.av2[i];
+        cout<<"Media do Trabalho: "; scanf("%f", &info.mediaTrabalho[i]); //cin>>info.mediaTrabalho[i];
+    }
 
     system("cls");
 
-    cout<<"Matricula: "<<aluno[0][0]<<endl;
-    cout<<"AV1: "<<aluno[0][1]<<endl;
-    cout<<"AV2: "<<aluno[0][2]<<endl;
-    cout<<"Media do Trabalho: "<<aluno[0][3]<<endl;
+    for (int i = 0; i < TOTALUNO; i++)
+    {
+        cout<<"\n\nMatricula: "<<info.matricula[i]<<endl;
+        printf("AV1: %.2f", info.av1[i]); //cout<<"AV1: "<<info.av1[i]<<endl; 
+        printf("\nAV2: %.2f", info.av2[i]); //cout<<"AV2: "<<info.av2[i]<<endl; 
+        printf("\nMedia do Trabalho: %.2f", info.mediaTrabalho[i]); //cout<<"Media do Trabalho: "<<info.mediaTrabalho[i]<<endl; 
 
-    aluno[0][4] = notaFinal(aluno[0][1], aluno[0][2], aluno[0][3]);
+        info.notaFinal[i] = notaFinal(info.av1[i], info.av2[i], info.mediaTrabalho[i]);
 
-    cout<<"Nota Final: "<<aluno[0][4];
-    
+        printf("\nNota Final: %.2f", info.notaFinal[i]); //cout<<"Nota Final: "<<info.notaFinal[i]; 
+    }
+
     return 0;
 }
