@@ -1,7 +1,7 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-#define TOTALUNO 1
+#define TOTALUNO 5
 
 /*
     São 5 alunos, ou seja, 5 linhas no meu vetor
@@ -16,8 +16,8 @@ using namespace std;
 */
 
 struct dadosaluno{
-    int matricula[TOTALUNO];
-    float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO];
+    int matricula[TOTALUNO]={2015,2016,2017,2018,2019};
+    float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO] = {5,10,8,4,3};
 };
 
 float notaFinal(float av1, float av2, float trab)
@@ -31,11 +31,11 @@ int main()
     
     for (int i = 0; i < TOTALUNO; i++)
     {
-        cout<<"\nMatricula: "; cin>>info.matricula[i]; 
-        cout<<"AV1: "; cin>>info.av1[i];
-        cout<<"AV2: "; cin>>info.av2[i];
-        cout<<"Media do Trabalho: "; cin>>info.mediaTrabalho[i];
-        info.notaFinal[i] = notaFinal(info.av1[i], info.av2[i], info.mediaTrabalho[i]);
+        // cout<<"\nMatricula: "; cin>>info.matricula[i]; 
+        // cout<<"AV1: "; cin>>info.av1[i];
+        // cout<<"AV2: "; cin>>info.av2[i];
+        // cout<<"Media do Trabalho: "; cin>>info.mediaTrabalho[i];
+        // info.notaFinal[i] = notaFinal(info.av1[i], info.av2[i], info.mediaTrabalho[i]);
     }
 
     system("cls");
@@ -50,6 +50,8 @@ int main()
             indice = (TOTALUNO - i);
         }
     }
+
+    cout<<"MATRICULA: "<<info.matricula[indice]<<endl<<"NOTA FINAL: "<<info.notaFinal[indice];
 
     return 0;
 }
