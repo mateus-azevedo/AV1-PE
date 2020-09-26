@@ -35,20 +35,20 @@ int main()
         cout<<"AV1: "; cin>>info.av1[i];
         cout<<"AV2: "; cin>>info.av2[i];
         cout<<"Media do Trabalho: "; cin>>info.mediaTrabalho[i];
+        info.notaFinal[i] = notaFinal(info.av1[i], info.av2[i], info.mediaTrabalho[i]);
     }
 
     system("cls");
 
+    int indice; float maior = -1;
+
     for (int i = 0; i < TOTALUNO; i++)
     {
-        cout<<"\n\nMatricula: "<<info.matricula[i]<<endl;
-        cout<<"AV1: "<<info.av1[i]<<endl; 
-        cout<<"AV2: "<<info.av2[i]<<endl; 
-        cout<<"Media do Trabalho: "<<info.mediaTrabalho[i]<<endl; 
-
-        info.notaFinal[i] = notaFinal(info.av1[i], info.av2[i], info.mediaTrabalho[i]);
-
-        cout<<"Nota Final: "<<info.notaFinal[i]; 
+        if (info.notaFinal[TOTALUNO - i] > maior)
+        {
+            maior = info.notaFinal[TOTALUNO - i];
+            indice = (TOTALUNO - i);
+        }
     }
 
     return 0;
