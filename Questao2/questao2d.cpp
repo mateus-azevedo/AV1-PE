@@ -20,7 +20,7 @@ struct dadosaluno{
     float av1[TOTALUNO], av2[TOTALUNO], mediaTrabalho[TOTALUNO], notaFinal[TOTALUNO];
 };
 
-int notaFinal(int av1, int av2, int trab)
+float notaFinal(float av1, float av2, float trab)
 {
     return ((((av1 + av2) / 2) + trab) / 2);
 }
