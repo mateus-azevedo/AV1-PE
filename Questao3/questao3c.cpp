@@ -21,6 +21,15 @@ int main()
 
         resultado[i] = multiplicacao(num1[i], num2[i]);
     }
+
+    system("cls");
+
+    for (int i = 0; i < MAX; i++)
+        cout<<"RESULTADO("<<i+1<<"): "<<resultado[i]<<"\t==>\t"<<num1[i]<<" x "<<num2[i]<<" = "<<resultado[i]<<endl;
+    
+    cout<<endl;
+    
+    system("pause");
     
     return 0;
 }
