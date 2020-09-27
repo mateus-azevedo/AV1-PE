@@ -1,7 +1,7 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-#define MAX 3
+#define MAX 10
 
 int multiplicacao(int x, int y)
 {
@@ -25,7 +25,7 @@ int main()
     system("cls");
 
     for (int i = 0; i < MAX; i++)
-        cout<<"RESULTADO("<<i+1<<"): "<<resultado[i]<<"\t==>\t"<<num1[i]<<" x "<<num2[i]<<" = "<<resultado[i]<<endl;
+        cout<<"RESULTADO("<<i+1<<"): "<<resultado[i]<<" \t==>\t"<<num1[i]<<" x "<<num2[i]<<" = "<<resultado[i]<<endl;
     
     cout<<endl;
     
