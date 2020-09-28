@@ -23,8 +23,14 @@ main()
         }
     }
 
+    system("cls");
+    printf("\tELEMENTOS ORDENADOS\n  ");
+
     for (int i = 0; i < 10; i++)
     {
-        printf("%d\n", vetor[i]);
+        (i < 9)? printf("%d, ", vetor[i]) : printf("%d.\n\n", vetor[i]);
     }
+
+    system("pause");
+    return 0;
 }
