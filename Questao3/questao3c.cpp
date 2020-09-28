@@ -24,6 +24,7 @@ int main()
 
     system("cls");
     cout<<"\tRESULTADO DAS MULTIPLICACAO"<<endl<<endl;
+    
     for (int i = 0; i < MAX; i++)
         cout<<"RESULTADO("<<i+1<<"): "<<resultado[i]<<" \t==>\t"<<num1[i]<<" x "<<num2[i]<<" = "<<resultado[i]<<endl;
     
