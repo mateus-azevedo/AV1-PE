@@ -3,8 +3,12 @@
 
 main()
 {
-
-    int vetor[10] = {9, 6, 7, 2, 5, 3, 8, 4, 1, 10}, aux = 0;   
+    int vetor[10], aux = 0;   
+    
+    for (int i = 0; i < 10; i++)
+    {
+        printf("Vetor[%d]: ", i); scanf("%d", &vetor[i]);
+    }
 
     for (int i = 0; i < 10; i++)
     {
