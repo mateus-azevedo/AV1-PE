@@ -5,7 +5,7 @@ using namespace std;
 
 main()
 {
-    float matriz[3][6], somaPares = 0, media;
+    float matriz[3][6], somaPares = 0, media = 0;
     int i, j;
 
     for (i = 0; i < 3; i++)
@@ -23,10 +23,13 @@ main()
         {
             if (j == 0 || j == 2 || j == 4)
                 somaPares = somaPares + matriz[i][j];
+
+            if (j == 1 || j == 3)
+                media = media + matriz[i][j];
         }
     
+    media = media / 6;
 
-    media = ((matriz[0][1] + matriz[0][3]) + (matriz[1][1] + matriz[1][3]) + (matriz[2][1] + matriz[2][3])) / 6;
 
     for (i = 0; i < 3; i++)
     {
