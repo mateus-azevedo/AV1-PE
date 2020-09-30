@@ -18,6 +18,10 @@ main(){
 
     media = ((matriz[0][1] + matriz[0][3])+(matriz[1][1] + matriz[1][3])+(matriz[2][1] + matriz[2][3]))/6;
 
+    for(i=0; i<3; i++){
+        matriz[i][5] = matriz[i][1] + matriz[i][2];
+    }
+
     cout<<endl;
     cout<<"SOMA: "<<somaPares<<endl;
     cout<<"MEDIA: "<<media;
