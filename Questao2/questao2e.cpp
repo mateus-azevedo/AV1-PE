@@ -1,7 +1,6 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<iostream>
-#include<string.h>
 using namespace std;
 
 main(){
@@ -14,4 +13,6 @@ main(){
             cout<<endl;
         }
     }
+
+    somaPares = matriz[0][0] + matriz[0][2] + matriz[0][4] + matriz[1][0] + matriz[1][2] + matriz[1][4] + matriz[2][0] + matriz[2][2] + matriz[2][4];
 }
