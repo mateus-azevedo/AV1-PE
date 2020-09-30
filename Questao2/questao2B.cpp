@@ -6,6 +6,10 @@ using namespace std;
 
 void verificaAluno(int aluno[ALUNO])
 {
+    system("cls");
+
+    cout<<"\tRESULTADO DOS ALUNOS\n"<<endl;
+
     for(int i = 0; i < ALUNO; i++)
     {
         if (aluno[i] >= 7)
@@ -17,12 +21,18 @@ void verificaAluno(int aluno[ALUNO])
 
 int main()
 {
-    char gabarito[NOTA] = {'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a', 'a'};
+    char gabarito[NOTA];
     char resposta[ALUNO][NOTA];
+
+    for (int i = 0; i < NOTA; i++)
+    {
+        cout<<"Entre com o gabarito da Questao "<< i + 1 <<": ";
+        cin>>gabarito[i];
+    }
 
     for (int i = 0; i < ALUNO; i++)
     {
-        cout<<"Aluno "<<i + 1<<endl;
+        cout<<"\nAluno "<<i + 1<<endl;
         for (int j = 0; j < NOTA; j++)
         {
             printf("Digite a respota da questao %d: ", j + 1);
