@@ -22,7 +22,15 @@ main(){
         matriz[i][5] = matriz[i][1] + matriz[i][2];
     }
 
-    cout<<endl;
-    cout<<"SOMA: "<<somaPares<<endl;
-    cout<<"MEDIA: "<<media;
+    system("cls");
+
+    cout<<"SOMA DOS ELEMENTOS DAS COLUNAS PARES: "<<somaPares<<endl<<endl;
+    cout<<"MEDIA DOS ELEMENTOS DA SEGUNDA E QUARTA COLUNA: "<<media<<endl<<endl;
+    cout<<"MATRIZ MODIFICADA:"<<endl;
+    for(i=0; i<3; i++){
+        for(j=0; j<6; j++){
+            cout<<"["<<i<<"]["<<j<<"]: "<<matriz[i][j];
+            cout<<endl;
+        }
+    }
 }
