@@ -10,19 +10,19 @@ float somaColunaUmDois(float vetor[][6], int i)
 
 main()
 {
-    float matriz[3][6] = {1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6}, somaPares = 0, media = 0;
+    float matriz[3][6], somaPares = 0, media = 0;
     int i, j;
 
-    // for (i = 0; i < 3; i++)
-    // {
-    //     cout << "\n\tVALORES LINHA "<<i + 1<<endl<<endl;
+    for (i = 0; i < 3; i++)
+    {
+        cout << "\n\tVALORES LINHA "<<i + 1<<endl<<endl;
         
-    //     for (j = 0; j < 6; j++)
-    //     {
-    //         cout << "Insira o valor real "<< j + 1 <<" para a linha "<< i + 1 <<" : ";
-    //         cin >> matriz[i][j];
-    //     }
-    // }
+        for (j = 0; j < 6; j++)
+        {
+            cout << "Insira o valor real "<< j + 1 <<" para a linha "<< i + 1 <<" : ";
+            cin >> matriz[i][j];
+        }
+    }
 
     for (int i = 0; i < 3; i++)
     {
@@ -72,7 +72,8 @@ main()
     cout << "\nMEDIA DOS ELEMENTOS DA SEGUNDA E QUARTA COLUNA: " << media << endl << endl;
     for (i = 0; i < 3; i++)
     {
-        if (i == 0) cout<<"(";
+        if (i == 0) 
+            cout<<"(";
 
         for (j = 0; j < 6; j++)
         {
@@ -82,7 +83,8 @@ main()
             }
         }
 
-        if (i == 2) cout<<media * 6<<" / 6 = "<<media;
+        if (i == 2) 
+            cout<<media * 6<<" / 6 = "<<media;
     }
     
     cout<<endl<<endl;
@@ -110,7 +112,8 @@ main()
                 (j == 2) ? cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  =  " : cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  +  ";
             }
 
-            if (j == 5) cout << "[" << i << "][" << j << "]: " << matriz[i][j];
+            if (j == 5) 
+                cout << "[" << i << "][" << j << "]: " << matriz[i][j];
         }
         cout << endl;
     }
