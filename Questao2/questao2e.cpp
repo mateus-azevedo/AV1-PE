@@ -10,18 +10,19 @@ float somaColunaUmDois(float vetor[][6], int i)
 
 main()
 {
-    float matriz[3][6], somaPares = 0, media = 0;
+    float matriz[3][6] = {1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6}, somaPares = 0, media = 0;
     int i, j;
 
-    for (i = 0; i < 3; i++)
-    {
-        for (j = 0; j < 6; j++)
-        {
-            cout << "Insira um valor real para a posicao [" << i << "][" << j << "]: ";
-            cin >> matriz[i][j];
-            cout << endl;
-        }
-    }
+    // for (i = 0; i < 3; i++)
+    // {
+    //     cout << "\n\tVALORES LINHA "<<i + 1<<endl<<endl;
+        
+    //     for (j = 0; j < 6; j++)
+    //     {
+    //         cout << "Insira o valor real "<< j + 1 <<" para a linha "<< i + 1 <<" : ";
+    //         cin >> matriz[i][j];
+    //     }
+    // }
 
     for (int i = 0; i < 3; i++)
     {
@@ -44,6 +45,27 @@ main()
     cout << "\nSOMA DOS ELEMENTOS DAS COLUNAS PARES: " << somaPares << endl << endl;
     for (i = 0; i < 3; i++)
     {
+        for (int j = 0; j < 6; j++)
+        {
+            if (j == 0 || j == 2 || j == 4)
+            {
+                cout<<matriz[i][j]<<" + ";
+            }
+        }
+    }
+
+    cout<<endl;
+    
+    for (i = 0; i < 3; i++)
+    {
+        for (int j = 0; j < 6; j++)
+        {
+            if (j == 0 || j == 2 || j == 4)
+            {
+                cout<<matriz[i][j]<<" + ";
+            }
+        }
+        
         for (j = 0; j < 6; j++)
         {
             if (j == 0 || j == 2 || j == 4)
