@@ -41,9 +41,35 @@ main()
 
     system("cls");
 
-    cout << "SOMA DOS ELEMENTOS DAS COLUNAS PARES: " << somaPares << endl << endl;
-    cout << "MEDIA DOS ELEMENTOS DA SEGUNDA E QUARTA COLUNA: " << media << endl << endl;
-    cout << "MATRIZ MODIFICADA:" << endl;
+    cout << "\nSOMA DOS ELEMENTOS DAS COLUNAS PARES: " << somaPares << endl << endl;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 6; j++)
+        {
+            if (j == 0 || j == 2 || j == 4)
+            {
+                cout << "[" << i << "][" << j << "]: " << matriz[i][j];
+                cout << "\t";
+            }
+        }
+        cout << endl;
+    }
+
+    cout << "\nMEDIA DOS ELEMENTOS DA SEGUNDA E QUARTA COLUNA: " << media << endl << endl;
+    for (i = 0; i < 3; i++)
+    {
+        for (j = 0; j < 6; j++)
+        {
+            if (j == 1 || j == 3)
+            {
+                cout << "[" << i << "][" << j << "]: " << matriz[i][j];
+                cout << "\t";
+            }
+        }
+        cout << endl;
+    }
+
+    cout << "\nMATRIZ MODIFICADA:" << endl;
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)
