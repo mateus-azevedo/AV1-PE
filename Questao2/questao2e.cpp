@@ -5,7 +5,7 @@ using namespace std;
 
 float somaColunaUmDois(float vetor[][6], int i)
 {
-    return vetor[i][1] + vetor[i][2];
+    return vetor[i][0] + vetor[i][1];
 }
 
 main()
@@ -102,14 +102,14 @@ main()
         cout << endl;
     }
 
-    cout << "\nMATRIZ[x][5] MODIFICADA (col 1 + col 2 = col 5):" << endl <<endl;
+    cout << "\nMATRIZ[x][5] MODIFICADA (col 1 + col 2 = col 6):" << endl <<endl;
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)
         {
-            if (j == 1 || j == 2)
+            if (j == 0 || j == 1)
             {
-                (j == 2) ? cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  =  " : cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  +  ";
+                (j == 1) ? cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"\t\b\b  =  " : cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"\t\b\b +  ";
             }
 
             if (j == 5) 
