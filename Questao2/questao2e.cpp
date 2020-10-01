@@ -3,6 +3,11 @@
 #include <iostream>
 using namespace std;
 
+float somaColunaUmDois(float vetor[][6], int i)
+{
+    return vetor[i][1] + vetor[i][2];
+}
+
 main()
 {
     float matriz[3][6], somaPares = 0, media = 0;
@@ -19,7 +24,8 @@ main()
     }
 
     for (int i = 0; i < 3; i++)
-        for (j = 0; j < 6; j++)
+    {
+        for (int j = 0; j < 6; j++)
         {
             if (j == 0 || j == 2 || j == 4)
                 somaPares = somaPares + matriz[i][j];
@@ -27,14 +33,11 @@ main()
             if (j == 1 || j == 3)
                 media = media + matriz[i][j];
         }
+
+        matriz[i][5] = somaColunaUmDois(matriz, i);
+    }
     
     media = media / 6;
-
-
-    for (i = 0; i < 3; i++)
-    {
-        matriz[i][5] = matriz[i][1] + matriz[i][2];
-    }
 
     system("cls");
 
@@ -46,7 +49,8 @@ main()
         for (j = 0; j < 6; j++)
         {
             cout << "[" << i << "][" << j << "]: " << matriz[i][j];
-            cout << endl;
+            cout << "\t";
         }
+        cout << endl;
     }
 }
