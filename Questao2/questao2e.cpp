@@ -49,23 +49,15 @@ main()
         {
             if (j == 0 || j == 2 || j == 4)
             {
-                cout<<matriz[i][j]<<" + ";
+                !(i == 2 && j == 4) ? cout<<matriz[i][j]<<" + " : cout<<matriz[i][j]<<" = "<<somaPares;
             }
         }
     }
 
-    cout<<endl;
+    cout<<endl<<endl;
     
     for (i = 0; i < 3; i++)
     {
-        for (int j = 0; j < 6; j++)
-        {
-            if (j == 0 || j == 2 || j == 4)
-            {
-                cout<<matriz[i][j]<<" + ";
-            }
-        }
-        
         for (j = 0; j < 6; j++)
         {
             if (j == 0 || j == 2 || j == 4)
@@ -80,6 +72,23 @@ main()
     cout << "\nMEDIA DOS ELEMENTOS DA SEGUNDA E QUARTA COLUNA: " << media << endl << endl;
     for (i = 0; i < 3; i++)
     {
+        if (i == 0) cout<<"(";
+
+        for (j = 0; j < 6; j++)
+        {
+            if (j == 1 || j == 3)
+            {
+                !(i == 2 && j == 3) ? cout<<matriz[i][j]<<" + " : cout<<matriz[i][j]<<") / 6 = ?"<<endl;
+            }
+        }
+
+        if (i == 2) cout<<media * 6<<" / 6 = "<<media;
+    }
+    
+    cout<<endl<<endl;
+    
+    for (i = 0; i < 3; i++)
+    {
         for (j = 0; j < 6; j++)
         {
             if (j == 1 || j == 3)
@@ -91,14 +100,22 @@ main()
         cout << endl;
     }
 
-    cout << "\nMATRIZ MODIFICADA:" << endl;
+    cout << "\nMATRIZ[x][5] MODIFICADA (col 1 + col 2 = col 5):" << endl <<endl;
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 6; j++)
         {
-            cout << "[" << i << "][" << j << "]: " << matriz[i][j];
-            cout << "\t";
+            if (j == 1 || j == 2)
+            {
+                (j == 2) ? cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  =  " : cout << "[" << i << "][" << j << "]: " << matriz[i][j]<<"  +  ";
+            }
+
+            if (j == 5) cout << "[" << i << "][" << j << "]: " << matriz[i][j];
         }
         cout << endl;
     }
+    cout << endl;
+    system("pause");
+    
+    return 0;
 }
