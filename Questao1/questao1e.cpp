@@ -9,7 +9,7 @@ int maximoDivisorComum(int x, int y)
 
 int main()
 {
-  int num1 = 18, num2 = 24;
+  int num1, num2; 
   int maiorDivisorComum;
 
   cout<<"\tMAXIMO DIVISOR COMUM ENTRE DOIS NUMEROS"<<endl<<endl;
