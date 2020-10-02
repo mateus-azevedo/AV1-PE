@@ -2,11 +2,19 @@
 #include <stdlib.h>
 using namespace std;
 
+void mostraArrayChar(char *vetor, int tamanhoArray)
+{
+  for (int i = tamanhoArray; i >= 0; i--)
+  {
+    cout<<vetor + i<<endl;
+  }
+}
+
 int main()
 {
-  for(int i=0; i < 2; i++){
-    printf("%d\n",i+1);
-  }
-  cout<<"Hello World"<<endl;
+  char array[] = {"Percorrendo o meu Array"}; 
+
+  mostraArrayChar(array, sizeof(array));
+
   return 0;
 }
