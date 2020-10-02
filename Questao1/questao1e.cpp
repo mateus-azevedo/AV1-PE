@@ -4,10 +4,7 @@ using namespace std;
 
 int maximoDivisorComum(int x, int y)
 {
-  if((x % y) == 0)
-		return y;
-  else
-		return maximoDivisorComum(y,(x % y));
+  return ((x % y) == 0) ? y : maximoDivisorComum(y,(x % y));
 }
 
 int main()
@@ -15,8 +12,14 @@ int main()
   int num1 = 18, num2 = 24;
   int maiorDivisorComum;
 
+  cout<<"\tMAXIMO DIVISOR COMUM ENTRE DOIS NUMEROS"<<endl<<endl;
+  cout<<"Insira o primeiro numero inteiro: "; cin>>num1;
+  cout<<"Insira o segundo numero inteiro: "; cin>>num2;
+
   maiorDivisorComum = maximoDivisorComum(num1, num2);
-  cout<<"O maior divisor: "<<maiorDivisorComum;
+  cout<<"\nO maior divisor comum entre "<<num1<<" e "<<num2<<": "<<maiorDivisorComum<<endl<<endl;
+
+  system("pause");
   
   return 0;
 }
