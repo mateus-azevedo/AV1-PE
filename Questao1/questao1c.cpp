@@ -3,7 +3,11 @@
 #include<iostream>
 using namespace std;
 
-/*Questão 1 - c) Escreva uma função recursiva para apresentar a soma de todos os números inteiros pares de zero até um número informado pelo usuário. Por exemplo: Para n = 7 a função deve retornar 0 + 2 + 4 + 6 = 12.*/
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
 
 int soma(int n){
     if(n==0)                                    //controle de parada

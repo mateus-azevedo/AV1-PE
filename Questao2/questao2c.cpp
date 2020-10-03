@@ -2,6 +2,12 @@
 #include<stdlib.h>
 using namespace std;
 
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
+
 int main()
 {
     int matriz[3][3] = {{1, -8, 5},{2, 2, 10},{20, 10, 3}}, soma[3] = {0, 0, 0}; 

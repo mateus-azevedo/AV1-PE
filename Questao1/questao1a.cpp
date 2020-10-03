@@ -4,7 +4,11 @@
 #define max 101
 using namespace std;
 
-/*     Questão 1A) Escreva uma função que conte o número de consoantes de uma string passada como parâmetro     */
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
 
 int verificar(char s[]){
     int i, cons=0;

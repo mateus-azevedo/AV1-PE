@@ -2,6 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
+
 int main() {
 int numeros[5][5], continua, i, j, c, l;
 

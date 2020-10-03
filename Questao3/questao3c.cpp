@@ -1,7 +1,13 @@
 #include<iostream>
 #include<stdlib.h>
-using namespace std;
 #define MAX 10
+using namespace std;
+
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
 
 int multiplicacao(int x, int y)
 {

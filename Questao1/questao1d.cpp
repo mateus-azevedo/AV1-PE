@@ -5,7 +5,11 @@
 #define max 101
 using namespace std;
 
-/*  Questão 1d) Escreva uma função recursiva para inverter uma string usando recursão. Exemplo: String: codigo Saída: ogidoc    */
+/*
+Mateus Santos de Azevedo – 2020100086
+Rhuan Gonzaga Cunha Francisco – 2020100052
+Vinícius Silva de Oliveira – 2020101398
+*/
 
 void inverter(char p[]){
     if(*p!='\0'){
